@@ -1,0 +1,29 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Build Objective-C",
+      "type": "shell",
+      "command": "clang",
+      "args": [
+        "`gnustep-config --objc-flags`",
+        "-fobjc-runtime=gnustep-2.0",
+        "hello.m",
+        "-o",
+        "hello",
+        "`gnustep-config --base-libs`"
+      ],
+      "options": {
+        "shell": {
+          "executable": "C:\\msys64\\mingw64.exe",
+          "args": ["-c"]
+        }
+      },
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": ["$gcc"]
+    }
+  ]
+}
